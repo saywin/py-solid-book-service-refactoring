@@ -1,5 +1,6 @@
 class DisplayConsole:
-    def display(self, title: str, content: str) -> None:
+    @staticmethod
+    def display(title: str, content: str) -> None:
         print(content)
 
     def __call__(self, *args, **kwargs) -> None:
@@ -7,7 +8,8 @@ class DisplayConsole:
 
 
 class DisplayReverse:
-    def display(self, title: str, content: str) -> None:
+    @staticmethod
+    def display(title: str, content: str) -> None:
         print(content[::-1])
 
     def __call__(self, *args, **kwargs) -> None:
